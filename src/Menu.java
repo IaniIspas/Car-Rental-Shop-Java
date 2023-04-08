@@ -207,6 +207,9 @@ public class Menu {
                     color = scanner.nextLine();
                     carController.displayCarByYearAndColor(year, color);
                     break;
+                case 12:
+                    System.out.println("Company name: " + c.getName());
+                    System.out.println("Address: " + a.getStreet() + ", " + a.getCity() + ", " + a.getCountry());
             }
         }while (choice != 13);
         scanner.close();

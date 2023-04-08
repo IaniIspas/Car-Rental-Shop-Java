@@ -4,17 +4,17 @@ import java.util.Date;
 
 public class Contract {
     private int id;
-    private Customer customer;
-    private Employee employee;
-    private Car car;
-    private Date startDate;
-    private Date endDate;
+    private int customerID;
+    private int employeeID;
+    private int carID;
+    private String startDate;
+    private String endDate;
 
     public Contract() {}
-    public Contract(Customer customer, Employee employee, Car car, Date startDate, Date endDate) {
-        this.customer = customer;
-        this.employee = employee;
-        this.car = car;
+    public Contract(int customerID, int employeeID, int carID, String startDate, String endDate) {
+        this.customerID = customerID;
+        this.employeeID = employeeID;
+        this.carID = carID;
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -27,43 +27,43 @@ public class Contract {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerID() {
+        return customerID;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public int getEmployeeID() {
+        return employeeID;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
     }
 
-    public Car getCar() {
-        return car;
+    public int getCarID() {
+        return carID;
     }
 
-    public void setCar(Car car) {
-        this.car = car;
+    public void setCarID(int carID) {
+        this.carID = carID;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 }

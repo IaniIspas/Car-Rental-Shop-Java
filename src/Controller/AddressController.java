@@ -1,6 +1,7 @@
 package Controller;
 
 import Models.Address;
+import Models.Person;
 import Service.AddressService;
 
 import java.util.ArrayList;
@@ -17,8 +18,16 @@ public class AddressController {
         return addressService.addAddress(street, city, country);
     }
 
-    public ArrayList<Address> getAllAddresses() {
-        return addressService.getAllAddresses();
+    public void displayAllPersons() {
+        ArrayList<Address> addresses = addressService.getAllAddresses();
+        if (addresses.isEmpty()) {
+            System.out.println("There are no addresses for this rental shop!");
+        } else {
+            for (Address address : addresses) {
+                System.out.println("Street: " + address.getStreet() + ", City: " + address.getCity() +
+                        ", Country: " + address.getCountry());
+            }
+        }
     }
 
     public boolean updateAddress(int id, Address address) {

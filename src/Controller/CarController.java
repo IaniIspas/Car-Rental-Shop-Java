@@ -35,4 +35,22 @@ public class CarController {
     public boolean deleteCar(int id) {
         return carService.deleteCar(id);
     }
+
+    public void displayCarByMakeAndModel(String make, String model) {
+        Car car = carService.findByMakeAndModel(make, model);
+        if (car != null) {
+            System.out.println("Car found!");
+        } else {
+            System.out.println("Car not found.");
+        }
+    }
+
+    public void displayCarByYearAndColor(int year, String color) {
+        Car car = carService.findByearAndColor(year, color);
+        if (car != null) {
+            System.out.println("Car found!");
+        } else {
+            System.out.println("Car not found.");
+        }
+    }
 }

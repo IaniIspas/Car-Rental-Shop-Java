@@ -24,10 +24,6 @@ public class ContractRepository {
         }
         return null;
     }
-    public ArrayList<Contract> getAllContracts() {
-        return contracts;
-    }
-
     public boolean update(int id, Contract contract) {
         try {
             int cnt = 0;

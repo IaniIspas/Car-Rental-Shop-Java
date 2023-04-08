@@ -1,5 +1,6 @@
 package Controller;
 
+import Models.Car;
 import Models.Customer;
 import Models.Employee;
 import Models.Person;
@@ -20,6 +21,18 @@ public class PersonController {
     }
     public ArrayList<Person> getAllPersons() {
         return personService.getAllPersons();
+    }
+
+    public void displayAllPersons() {
+        ArrayList<Person> persons = personService.getAllPersons();
+        if (persons.isEmpty()) {
+            System.out.println("There are no persons currently in the rental shop!");
+        } else {
+            for (Person person : persons) {
+                System.out.println("Name: " + person.getName() + ", Address: " + person.getAddress() +
+                        ", Phone: " + person.getPhone() + ", Email: " + person.getEmail());
+            }
+        }
     }
     public boolean updatePerson(int id, String name, String address, String phone, String email, double value) {
         Person person = personService.getPersonByPhone(phone);

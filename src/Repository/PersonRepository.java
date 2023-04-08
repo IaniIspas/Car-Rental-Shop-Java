@@ -40,7 +40,7 @@ public class PersonRepository {
         try {
             int cnt = 0;
             for (Person person : persons) {
-                if(person.getEmail() == email) {
+                if(person.getEmail().equals(email)) {
                     persons.remove(cnt);
                     return true;
                 }

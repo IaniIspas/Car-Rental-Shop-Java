@@ -37,4 +37,12 @@ public class CarService {
     public boolean deleteCar(int id) {
         return carRepository.delete(id);
     }
+
+    public Car findByMakeAndModel(String make, String model) {
+        return carRepository.findByMakeAndModel(make, model);
+    }
+
+    public Car findByearAndColor(int year, String color) {
+        return carRepository.findByearAndColor(year, color);
+    }
 }

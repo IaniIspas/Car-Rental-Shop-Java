@@ -16,18 +16,14 @@ public class ContractService {
         reg_no++;
     }
 
-    public boolean addContract(Customer customer, Employee employee, Car car, Date startDate, Date endDate) {
-        Contract contract = new Contract(customer, employee, car, startDate, endDate);
+    public boolean addContract(int customerID, int employeeID, int carID, String startDate, String endDate) {
+        Contract contract = new Contract(customerID, employeeID, carID, startDate, endDate);
         contract.setId(reg_no);
         return contractRepository.add(contract);
     }
 
     public Contract getContractById(int id) {
         return contractRepository.get(id);
-    }
-
-    public ArrayList<Contract> getAllContracts() {
-        return contractRepository.getAllContracts();
     }
 
     public boolean updateContract(int id, Contract contract) {

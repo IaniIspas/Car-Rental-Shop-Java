@@ -8,12 +8,39 @@ public class Car {
     protected String color;
     protected double rentalPrice;
 
-    public Car() {}
-    public Car(String make, String model, int year, String color, double rentalPrice) {
+    public Car() {
+    }
+
+    public Car(int id, String make, String model, int year, String color, double rentalPrice) {
+        this.id = id;
         this.make = make;
         this.model = model;
         this.year = year;
         this.color = color;
+        this.rentalPrice = rentalPrice;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setRentalPrice(double rentalPrice) {
         this.rentalPrice = rentalPrice;
     }
 
@@ -21,47 +48,35 @@ public class Car {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getMake() {
         return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public int getYear() {
         return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public double getRentalPrice() {
         return rentalPrice;
     }
 
-    public void setRentalPrice(double rentalPrice) {
-        this.rentalPrice = rentalPrice;
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", color='" + color + '\'' +
+                ", rentalPrice=" + rentalPrice +
+                '}';
     }
 }
